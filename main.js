@@ -1,35 +1,44 @@
-alert("acerte a quantidade")
-
-1-50
+alert("Acerte a quantidade de balas no pote!!")
 
 let attempts = 1
 
-let reposta = Number(prompt("Quantas bolas tem no pote? "))
+let resposta = Number(prompt("Quantas balas tem no pote? (Esta entre 1 e 50)"))
 
-while (reposta > 27 && reposta < 27) {
+// ou
+// while (resposta >= 1 && resposta <= 26 && resposta >= 28 && resposta <= 50) <-- essa daqui é a versão mais longa sem o uso do !=
+while (resposta > 0 && resposta < 51 && resposta != 27) {
     
-    if (reposta > 27) {
+    if (resposta > 27) {
         console.log("O número correto está mais á baixo")
         alert("O número correto está mais á baixo")
-    } else if (reposta < 27) {
+    } else if (resposta < 27) {
         console.log("O número correto está mais á cima")
         alert("O número correto está mais á cima")
-    }
-    
+    } else (
+        console.log("O número ou valor digitado não é valido!!")
+        alert("O número ou valor digitado não é valido!!")
+    )
     attempts++
 }
 
-console.log(
-"Parabéns, você acertou o número" +
-"\nNúmero correto: 27\nTentativas totais: " + attempts
-)
-alert(
-"Parabéns, você acertou o número" +
-"\nNúmero correto: 27\nTentativas totais: " + attempts
-)
+console.log("Parabéns, você acertou o número de balas no pote\nNúmero correto de balas: 27\nTentativas totais: " + attempts)
+alert("Parabéns, você acertou o número de balas no pote\nNúmero correto de balas: 27\nTentativas totais: " + attempts)
 
 console.log("Por ter acertado, você ganha café e bolo!!")
 alert("Por ter acertado, você ganha café e bolo!!")
+
+// obs: a minha pesquisa aqui foi sobre um operador que pudesse indicar diferença
+// o mesmo sendo o !=, por exemplo
+// while (resposta > 0 && resposta < 51 && resposta != 27)
+// a linha de código á acima, diz na primeira parte:
+// a variavel "resposta" tem que ser acima de 0 e menor que 51
+// isso indica um limite definido de 1 até 50
+// e o operador de diferença aje na útilma parte
+// quando nos temos "resposta != 27", significa que:
+// a variavel "resposta" tem de ser diferente de 27
+// no resumo geral, o contexto total presente dentro do while é:
+// "Para que o while continue sendo verdade, o número inserido
+// tem que ser maior que 0, menor que 51 e diferente de 27"
 ___________________________________________________________
 
 // alert("Cofrinho do Pedro")

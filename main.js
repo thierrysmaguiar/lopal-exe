@@ -1,36 +1,70 @@
-alert("Cofrinho do Pedro")
+alert("acerte a quantidade")
 
-let attempts = 0
+1-50
 
-let total = 0
+let attempts = 1
 
-while (total < 300) {
+let reposta = Number(prompt("Quantas bolas tem no pote? "))
 
-let valor_inserido = Number(prompt("Digite o valor a ser colocado no cofrinho hoje: "))
-
-if (valor_inserido > 0) {
-  total += valor_inserido
-    console.log("O valor atual é " + total)
-    alert("O valor atual é " + total)
-} else {
-    console.log("O valor digitado é invalido")
-    alert("O valor digitado é invalido")
-}
+while (reposta > 27 && reposta < 27) {
+    
+    if (reposta > 27) {
+        console.log("O número correto está mais á baixo")
+        alert("O número correto está mais á baixo")
+    } else if (reposta < 27) {
+        console.log("O número correto está mais á cima")
+        alert("O número correto está mais á cima")
+    }
+    
     attempts++
 }
 
 console.log(
-"Parabéns, você alcançou a meta para comprar a Bicicleta!!" +
-"\nValor necessário: 300" +
-"\nValor Arrecadado: " + total +
-"\nSemanas contabilizadas: " + attempts
+"Parabéns, você acertou o número" +
+"\nNúmero correto: 27\nTentativas totais: " + attempts
 )
-alert (
-"Parabéns, você alcançou a meta para comprar a Bicicleta!!" +
-"\nValor necessário: 300" +
-"\nValor Arrecadado: " + total +
-"\nSemanas contabilizadas: " + attempts
+alert(
+"Parabéns, você acertou o número" +
+"\nNúmero correto: 27\nTentativas totais: " + attempts
 )
+
+console.log("Por ter acertado, você ganha café e bolo!!")
+alert("Por ter acertado, você ganha café e bolo!!")
+___________________________________________________________
+
+// alert("Cofrinho do Pedro")
+
+// let attempts = 0
+
+// let total = 0
+
+// while (total < 300) {
+
+// let valor_inserido = Number(prompt("Digite o valor a ser colocado no cofrinho hoje: "))
+
+// if (valor_inserido > 0) {
+//   total += valor_inserido
+//     console.log("O valor atual é " + total)
+//     alert("O valor atual é " + total)
+// } else {
+//     console.log("O valor digitado é invalido")
+//     alert("O valor digitado é invalido")
+// }
+//     attempts++
+// }
+
+// console.log(
+// "Parabéns, você alcançou a meta para comprar a Bicicleta!!" +
+// "\nValor necessário: 300" +
+// "\nValor Arrecadado: " + total +
+// "\nSemanas contabilizadas: " + attempts
+// )
+// alert (
+// "Parabéns, você alcançou a meta para comprar a Bicicleta!!" +
+// "\nValor necessário: 300" +
+// "\nValor Arrecadado: " + total +
+// "\nSemanas contabilizadas: " + attempts
+// )
 
 // obs: Neste código tive algumas dificuldades, como
 

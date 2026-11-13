@@ -1,44 +1,57 @@
 alert("Acerte a quantidade de balas no pote!!")
 
-let attempts = 1
+let tentativas = 1
 
-let resposta = Number(prompt("Quantas balas tem no pote? (Esta entre 1 e 50)"))
+let resposta = Number(prompt("Quantas balas tem no pote? (Está entre 1 e 50)"))
 
-// ou
-// while (resposta >= 1 && resposta <= 26 && resposta >= 28 && resposta <= 50) <-- essa daqui é a versão mais longa sem o uso do !=
-while (resposta > 0 && resposta < 51 && resposta != 27) {
-    
-    if (resposta > 27) {
+// antes dentro do while eu tinha feito algo do tipo
+// while (resposta > 0 && resposta < 51 && resposta != 27)
+// no entanto eu me esqueci que aqui não precisava definir teto nem chão
+// isso porque como o while é unicamente responsável pela repetição
+// a unica coisa necessária para ele continuar seria ser diferente de 27
+// ou seje, resposta != 27
+// isso enquanto o if/else dentro do while faz o papel de teto de 1 á 50
+// e invalides se fora dessa régua
+while (resposta != 27) {
+
+    if (resposta < 51 && resposta > 27) {
         console.log("O número correto está mais á baixo")
         alert("O número correto está mais á baixo")
-    } else if (resposta < 27) {
+    } else if (resposta < 27 && resposta > 0) {
         console.log("O número correto está mais á cima")
         alert("O número correto está mais á cima")
-    } else (
+    } else {
         console.log("O número ou valor digitado não é valido!!")
         alert("O número ou valor digitado não é valido!!")
-    )
-    attempts++
+    }
+
+// esse linha precisa estar aqui para o while continuar
+// e não travar nas mesagens do if/elseif/else
+// tambem se essa linha estivesse no topo antes do if
+// e você digitasse alguma resposta errada antes da certa
+// ia aparecer a mensagem do else, depois ia dizer que você acertou
+// exemplo:
+// na primeira ou primeiras respostas coloco letras ou números que não sejam 27
+// dai finalmente eu coloco 27
+// apareceria "O número ou valor digitado não é valido!!"
+// dai logo em seguida aparecia "Parabéns, você acertou o número de balas no pote"
+// então toda a mensagem final
+resposta = Number(prompt("Quantas balas tem no pote? (Está entre 1 e 50)"))
+    
+    tentativas++
 }
 
-console.log("Parabéns, você acertou o número de balas no pote\nNúmero correto de balas: 27\nTentativas totais: " + attempts)
-alert("Parabéns, você acertou o número de balas no pote\nNúmero correto de balas: 27\nTentativas totais: " + attempts)
+console.log("Parabéns, você acertou o número de balas no pote\nNúmero correto de balas: 27\nTentativas totais: " + tentativas)
+alert("Parabéns, você acertou o número de balas no pote\nNúmero correto de balas: 27\nTentativas totais: " + tentativas)
 
 console.log("Por ter acertado, você ganha café e bolo!!")
 alert("Por ter acertado, você ganha café e bolo!!")
 
 // obs: a minha pesquisa aqui foi sobre um operador que pudesse indicar diferença
-// o mesmo sendo o !=, por exemplo
-// while (resposta > 0 && resposta < 51 && resposta != 27)
-// a linha de código á acima, diz na primeira parte:
-// a variavel "resposta" tem que ser acima de 0 e menor que 51
-// isso indica um limite definido de 1 até 50
-// e o operador de diferença aje na útilma parte
-// quando nos temos "resposta != 27", significa que:
+// o mesmo sendo o !=, quando nos temos "resposta != 27", significa que:
 // a variavel "resposta" tem de ser diferente de 27
-// no resumo geral, o contexto total presente dentro do while é:
-// "Para que o while continue sendo verdade, o número inserido
-// tem que ser maior que 0, menor que 51 e diferente de 27"
+// e enquanto isso for uma verdade, o while continua repetindo
+// isso claro que com o "resposta = Number(prompt(..." na penultima linha
 ___________________________________________________________
 
 // alert("Cofrinho do Pedro")
